@@ -1,0 +1,10 @@
+[Unit]
+Description=Headphones plug detector and playback controller
+After=pulseaudio.service dbus.socket
+
+[Service]
+ExecStart=@bindir@/headphones-plug-controller
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
