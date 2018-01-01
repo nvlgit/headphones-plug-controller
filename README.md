@@ -10,6 +10,8 @@ Pauses mpris2 compatible media players when headphones get plugged out and plays
     meson builddir --prefix=/usr && cd builddir
     ninja
     su -c 'ninja install'
+For rpmbuild: <a href="https://github.com/nvlgit/fedora-specs/blob/master/headphones-plug-controller.spec">headphones-plug-controller.spec</a> 
+
     
 ### Run
 
