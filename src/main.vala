@@ -29,7 +29,7 @@ namespace Hpppc {
 
 	const string APP_NAME = "headphones-plug-controller";
 	const string APP_VERSION = "0.1.0";
-	const string APP_ID = "com.gitlub.nvlgit.Headphones-Plug-Controller";
+	const string APP_ID = "com.gitlab.nvlgit.Headphones-Plug-Controller";
 
 	public class Application {
 
