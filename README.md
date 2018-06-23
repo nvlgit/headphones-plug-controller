@@ -2,7 +2,7 @@
 
 headphones-plug-controller - f1u77y/<a href="https://github.com/f1u77y/headphones-plug-detector">headphones-plug-detector</a> implementation in Vala
 
-PPauses playback for mpris2 compatible media players when the headphones jack unplugs and resumes playback when it is plugged back in. 
+Pauses playback for mpris2 compatible media players when the headphones jack unplugs and resumes playback when it is plugged back in. 
 
 ### Building and Installation
 
