@@ -1,4 +1,4 @@
-# headphones-plug-controller
+# ![icon](https://assets.gitlab-static.net/uploads/-/system/project/avatar/6581165/bitmap.png) headphones-plug-controller
 
 headphones-plug-controller - f1u77y/<a href="https://github.com/f1u77y/headphones-plug-detector">headphones-plug-detector</a> implementation in Vala
 
