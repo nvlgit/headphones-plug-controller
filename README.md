@@ -9,7 +9,7 @@ Pauses playback for mpris2 compatible media players when the headphones jack  un
 ### Building and Installation
 
 ```bash
-git clone https://github.com/nvlgit/headphones-plug-controller.git && cd headphones-plug-controller
+git clone https://gitlab.com/nvlgit/headphones-plug-controller.git && cd headphones-plug-controller
 meson builddir --prefix=/usr && cd builddir
 ninja
 su -c 'ninja install'
