@@ -40,7 +40,7 @@ namespace Hpppc {
 		private PulseAudio.Context context;
 		private PulseAudio.Proplist proplist;
 		private PortType last_port;
-		public signal void port_changed ();
+		public signal void port_changed (PortType port);
 
 		public PlugDetector () {
 			GLib.Object();
@@ -50,7 +50,7 @@ namespace Hpppc {
 			this.proplist = new PulseAudio.Proplist ();
 			this.proplist.sets (PulseAudio.Proplist.PROP_APPLICATION_NAME, APP_NAME);
 			this.proplist.sets (PulseAudio.Proplist.PROP_APPLICATION_ID, APP_ID);
-			this.proplist.sets (PulseAudio.Proplist.PROP_APPLICATION_VERSION, APP_VERSION);
+			this.proplist.sets (PulseAudio.Proplist.PROP_APPLICATION_VERSION, VERSION);
 		}
 
 		public void run () {
@@ -99,7 +99,7 @@ namespace Hpppc {
 				PortType current_port = get_port_type (info.active_port);
 				if ( current_port != last_port ) {
 					last_port = current_port;
-					port_changed (); // Emit signal
+					port_changed (last_port); // Emit signal
 					debug ("\nActive port: %s\n", info.active_port.name);
 				}
 			}

@@ -141,8 +141,8 @@ namespace Hpppc {
     public interface MprisPlayer : GLib.Object {
 
         public abstract string PlaybackStatus {owned get; }
-        public abstract async void Play()  throws IOError;
-        public abstract async void Pause() throws IOError;
+        public abstract async void Play()  throws GLib.Error;
+        public abstract async void Pause() throws GLib.Error;
     }
 
     public class Mpris2Controller : GLib.Object {
@@ -161,7 +161,7 @@ namespace Hpppc {
 
                 this.player = Bus.get_proxy_sync ( BusType.SESSION, dbus_name,
                                                    "/org/mpris/MediaPlayer2" );
-            } catch (IOError e) {
+            } catch (GLib.Error e) {
 
                 debug ("Can't create DBus interfaces - %s", e.message);
             }

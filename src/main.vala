@@ -25,11 +25,11 @@
  * authorization.
  */
 
-namespace Hpppc {
+[CCode(cname="VERSION")]    extern const string VERSION;
+[CCode(cname="APP_ID")]     extern const string APP_ID;
+[CCode(cname="APP_NAME")]   extern const string APP_NAME;
 
-	const string APP_NAME = "headphones-plug-controller";
-	const string APP_VERSION = "0.1.0";
-	const string APP_ID = "com.github.nvlgit.Headphones-Plug-Controller";
+namespace Hpppc {
 
 	public class Application {
 
@@ -58,7 +58,7 @@ namespace Hpppc {
 
 			if (version) {
 
-				stdout.printf ("Version: %s\n", APP_VERSION);
+				stdout.printf ("Version: %s\n", VERSION);
 				return 0;
 			}
 
@@ -74,11 +74,11 @@ namespace Hpppc {
 			var controller = new PlaybackController ();
 			detector.run ();
 
-			detector.port_changed.connect ( () => {
+			detector.port_changed.connect ( (p) => {
 
-				if ( ( detector.get_last_port_type () ) == PortType.HEADPHONES )
+				if (p == PortType.HEADPHONES)
 					controller.resume.begin ();
-				if ( ( detector.get_last_port_type () ) == PortType.SPEAKER )
+				if (p == PortType.SPEAKER )
 					controller.discontinue.begin ();
 			});
 

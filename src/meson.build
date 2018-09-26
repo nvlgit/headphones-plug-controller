@@ -11,9 +11,15 @@ headphones_plug_controller_deps = [
 ]
 
 #gnome = import('gnome')
-
+c_args = [
+  '-DVERSION="' + meson.project_version() + '"',
+  '-DAPP_NAME="' + meson.project_name() + '"',
+  '-DAPP_ID="' + app_id + '"'
+]
 
 executable('headphones-plug-controller', headphones_plug_controller_sources,
-  vala_args: '--target-glib=2.50',  dependencies: headphones_plug_controller_deps,
+  vala_args: '--target-glib=2.50',
+  c_args: c_args,
+  dependencies: headphones_plug_controller_deps,
   install: true,
 )
