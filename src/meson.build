@@ -10,7 +10,6 @@ headphones_plug_controller_deps = [
   dependency('libpulse-mainloop-glib', version: '>= 11.0'),
 ]
 
-#gnome = import('gnome')
 c_args = [
   '-DVERSION="' + meson.project_version() + '"',
   '-DAPP_NAME="' + meson.project_name() + '"',
