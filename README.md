@@ -1,4 +1,4 @@
-# headphones-plug-controller
+# ![icon](https://assets.gitlab-static.net/uploads/-/system/project/avatar/6581165/bitmap.png) headphones-plug-controller
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
@@ -15,6 +15,16 @@ ninja
 su -c 'ninja install'
 ```
 For rpmbuild: <a href="https://github.com/nvlgit/fedora-specs/blob/master/headphones-plug-controller.spec">headphones-plug-controller.spec</a> 
+=======
+Pauses playback for mpris2 compatible media players when the headphones jack unplugs and resumes playback when it is plugged back in. 
+
+### Building and Installation
+
+    git clone https://gitlab.com/nvlgit/headphones-plug-controller.git && cd headphones-plug-controller
+    meson builddir --prefix=/usr && cd builddir
+    ninja
+    su -c 'ninja install'
+For rpmbuild: <a href="https://gitlab.com/nvlgit/fedora-specs/blob/master/headphones-plug-controller.spec">headphones-plug-controller.spec</a> 
 
     
 ### Run

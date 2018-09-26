@@ -29,7 +29,13 @@
 [CCode(cname="APP_ID")]     extern const string APP_ID;
 [CCode(cname="APP_NAME")]   extern const string APP_NAME;
 
+<<<<<<< HEAD
 namespace Hpppc {
+=======
+	const string APP_NAME = "headphones-plug-controller";
+	const string APP_VERSION = "0.1.0";
+	const string APP_ID = "com.gitlab.nvlgit.Headphones-Plug-Controller";
+>>>>>>> 5bcee3183fe6428b1e8d056bdb7adfa7a3c7875d
 
 	public class Application {
 
